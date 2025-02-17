@@ -15,7 +15,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
     conn.sendPresenceUpdate('composing', m.chat)
     const prompt = encodeURIComponent(text)
 
-    const guru1 = `https://api.gurusensei.workers.dev/llama?prompt=${prompt}`
+    const guru1 = `https://gtech-api-xtp1.onrender.com/api/gemini/flash?apikey=APIKEY&prompt=${prompt}`
 
     try {
       let response = await fetch(guru1)
